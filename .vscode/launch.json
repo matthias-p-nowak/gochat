@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run gochat",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}",
+            "args": [
+                "config.ini"
+            ],
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "listening on port :([0-9]+)",
+                "uriFormat": "https://localhost:%s"
+            }
+        },
+        {
+            "name": "debug app firefox",
+            "type": "firefox",
+            "request": "attach",
+            "url": "https://127.0.0.1:5500/web/index.html",
+            "pathMappings": [
+                {
+                    "url": "https://127.0.0.1:5500",
+                    "path": "${workspaceFolder}"
+                },
+                {
+                    "url": "https://127.0.0.1:5500",
+                    "path": "${workspaceFolder}"
+                },
+                {
+                    "url": "https://127.0.0.1:5500",
+                    "path": "${workspaceFolder}"
+                },
+                {
+                    "url": "https://127.0.0.1:5500/",
+                    "path": "${workspaceFolder}/"
+                }
+            ],
+            "linux": {
+                "preLaunchTask": "firefox-devel"
+            }
+        }
+    ]
+}

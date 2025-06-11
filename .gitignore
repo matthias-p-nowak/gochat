@@ -1,0 +1,4 @@
+web
+database.db
+*.sum
+db/ent/*
